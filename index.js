@@ -87,7 +87,7 @@ function checkWinner(gameField) {
     const checkFirstDiagonalWinner = (index) => {
         let flatArray = gameField.flat(2)
         let word = ''
-        for (let i = index; i < flatArray.length; i += dimension - 1) {
+        for (let i = index; i < flatArray.length - 1; i += dimension - 1) {
             if (flatArray[i] === EMPTY)
                 continue
             word += flatArray[i]
